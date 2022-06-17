@@ -1,0 +1,21 @@
+ifconfig | grep inet[^6] | sort | awk '{print $2}' > file_name
+ifconfig | grep inet6 | sort | awk '{print $2}' >> file_name
+
+result:
+
+  ipv4:
+
+  127.0.0.1
+  172.17.0.1
+  172.18.0.1
+  172.19.0.1
+  192.168.0.110
+
+  ipv6:
+
+  ::1
+  fe80::42:27ff:fe00:ba06
+  fe80::42:cbff:fe34:9131
+  fe80::42:f9ff:fe24:2167
+  fe80::a07a:bbff:feeb:e07e
+  fe80::fb84:eeb9:93ba:ec3a
